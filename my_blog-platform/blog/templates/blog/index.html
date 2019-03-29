@@ -1,0 +1,65 @@
+{% extends "blog/base.html" %} 
+{% block main %} 
+  {% if error_msg %}
+    <p>{{ error_msg }}</p>
+  {% endif %} 
+  {% for post in post_list %}
+    <article class="post post-{{ post.pk }}" style="margin-bottom:15px">
+      <h2 class="post-title">
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-category label label-default"><a href="{% url 'blog:category' post.category.pk %}">{{ post.category.name}}</a></span>
+        {% comment %} {% for tag in post.tags.all %}
+          <span class="post-tag label label-success">
+            <a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a>
+          </span>
+        {% endfor %} {% endcomment %}
+        <span class="post-date label label-primary"><time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time></span>
+        <span class="post-author label label-success">{{ post.author }}</span>
+        <span class="post-comments-link  label label-info"><a href="{{ post.get_absolute_url }}#comment-list-panel">{{ post.comment_set.count }} 评论</a></span>
+        <span class="post-views-count label label-info">{{ post.views }} 阅读</span>
+      </div>
+
+      <div class="entry-content clearfix">
+        <p>{{ post.excerpt }}</p>
+        <div class="read-more cl-effect-14">
+            <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
+        </div>
+      </div>
+    </article>
+  {% empty %}
+    <div class='no-post'>暂时还没有发布的文章</div>
+  {% endfor %}
+
+
+  {% if is_paginated %}
+    <div style="text-align:center">
+      <div class="pagination">
+        {% if first %}
+          <a href="?page=1">1</a>
+        {% endif %}
+        {% if left %}
+          {% if left_has_more %}
+            <span>...</span>
+          {% endif %}
+          {% for i in left %}
+          <a href="?page={{ i }}">{{ i }}</a>
+          {% endfor %}
+        {% endif %}
+        <a class="pagination-current" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
+        {% if right %}
+          {% for i in right %}
+            <a href="?page={{ i }}">{{ i }}</a>
+          {% endfor %}
+          {% if right_has_more %}
+            <span>...</span>
+          {% endif %}
+        {% endif %}
+        {% if last %}
+          <a href="?page={{ paginator.num_pages }}">{{ paginator.num_pages }}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endblock main %}

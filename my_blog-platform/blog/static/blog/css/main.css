@@ -1,0 +1,238 @@
+body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f3f3f3
+}
+a {
+    color: #333;
+}
+a:hover {
+    color: #000;
+}
+h1 > a:focus, h1 > a:hover {
+    text-decoration: none;
+}
+body > header > div > div {
+    background: #fff;
+    padding: 20px 30px 10px;
+    border-radius: 15px;
+}
+.navbar-default {
+    background-color: transparent; 
+    border-color: transparent;
+}
+header hr{
+    margin-bottom: 40px;
+}
+.glyphicon-menu-hamburger {
+    font-size: 30px;
+}
+.navbar-nav {
+    /* background-color: #000000; */
+    font-size: 24px;
+}
+
+header > div{
+    margin-bottom: -20px;
+}
+
+#bs-navbar-collapse {
+    padding: 20px;
+}
+.navbar-nav a {
+    text-align: center;
+}
+#bs-navbar-collapse li {
+    min-height: 40px;
+}
+#search {
+    position: relative;
+    width: 125px;
+    top: 8px;
+    min-height: 40px;
+    text-align: center;
+}
+#search input {
+    position: absolute;
+    left: 0;
+    border-radius: 7px;
+}
+#search button {
+    position: absolute;
+    right: 0;
+    border-style: none;
+    background-color: transparent;
+    outline: none;
+}
+#search button :hover{
+    color: #000;
+    transform: scale(1.6); 
+    outline: none;
+}
+#search button :active{
+    background-color:transparent;
+    border-style: none;
+    outline: none;
+}
+.post {
+    background: #fff;
+    padding: 10px 30px 15px;
+    border-radius: 15px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+.label[class^=post- ] a {
+    color: #fff;
+}
+.post-meta {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.post-title {
+    font-size: 25px;
+    text-align: center;
+}
+h1.post-title {
+    font-size: 35px;
+    text-align: center;
+}
+.post-meta {
+    text-align: center;
+}
+.widget {
+    background: #fff;
+    padding: 5px 0 5px 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+.widget > h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.widget ul {
+    padding-left: 0;
+}
+.widget ul li {
+    list-style-type: none;
+}
+.badge {
+    padding: 1px 10px;
+}
+.widget-tag-cloud ul li {
+    list-style-type: none;
+    font-size: 13px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.nav.navbar-nav li a{
+    color: #333;
+}
+.nav.navbar-nav li a:hover {
+    color: #000;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.nav.navbar-nav li a:focus {
+    color: #333;
+    background-color: transparent;
+}
+.entry-content {
+    font-size: 16px;
+}
+aside ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pagination a {
+    font-size: 20px;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+a.pagination-current {
+    color:#fff;
+    background:#086ed5;
+    font-weight:600;
+}
+.read-more {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    word-spacing: 1px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-top: 20px;
+}
+.copyright {
+    text-align: center;
+    padding-top: 1em;
+    margin: 0;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+.contact-form input, .comment-form input {
+    border: 1px solid #aaa;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 5px 5px;
+    font-size: 14px;
+    transition: 0.4s border-color linear;
+    border-radius: 5px;
+}
+.contact-form textarea, .comment-form textarea {
+    border: 1px solid #aaa;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 14px;
+    line-height: 5px;
+    transition: 0.4s border-color linear;
+    border-radius: 5px;
+}
+.comment-form .comment-btn {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.comment-area {
+    background: #fff;
+    padding: 10px 30px 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+.widget-content ul {
+    padding-left: 10px;
+}
+.widget-content ul li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.comment-item:not(:last-child) {
+    border-bottom: 1px #eee solid;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.comment-item .nickname, .comment-item .submit-date {
+    color: #777;
+    font-size: 14px;
+}
+.comment-item .nickname:after {
+    content: ' ·';
+}
+li.comment-item {
+    list-style-type: none;
+}
+.comment-item .text {
+    text-indent: 25px;
+    margin-top: 10px;
+}
+img {
+    max-width: -webkit-fill-available;
+}
